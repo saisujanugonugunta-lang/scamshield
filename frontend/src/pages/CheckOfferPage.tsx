@@ -98,7 +98,7 @@ export const CheckOfferPage: React.FC<CheckOfferPageProps> = ({
     }
 
     try {
-      const apiBase = (import.meta.env.VITE_API_URL || '').replace(/\\/$/, '');
+      const apiBase = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
       const response = await fetch(`${apiBase}/api/analyze`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
